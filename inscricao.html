@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrição no Curso</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 600px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        button {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            margin: 20px auto 0;
+        }
+        
+        button:hover {
+            background: #2980b9;
+        }
+        
+        .voltar {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .voltar a {
+            color: #3498db;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Inscrição no Curso</h1>
+        
+        <form>
+            <div class="form-group">
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone">
+            </div>
+            
+            <div class="form-group">
+                <label for="curso">Curso de Interesse:</label>
+                <select id="curso" name="curso" required>
+                    <option value="">Selecione um curso</option>
+                    <option value="cc">Ciência da Computação</option>
+                    <option value="si">Sistemas de Informação</option>
+                    <option value="ec">Engenharia da Computação</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="mensagem">Alguma observação?</label>
+                <textarea id="mensagem" name="mensagem" rows="4"></textarea>
+            </div>
+            
+            <button type="submit">Enviar Inscrição</button>
+        </form>
+        
+        <div class="voltar">
+            <a href="index.html">← Voltar para a página principal</a>
+        </div>
+    </div>
+</body>
+</html>

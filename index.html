@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graduação em Ciência da Computação</title>
+    <style>
+        /* Reset e estilos globais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Cabeçalho */
+        header {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* Seção do curso */
+        .curso-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 40px;
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .curso-texto {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .curso-texto h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+        }
+        
+        .curso-imagem {
+            flex: 1;
+            min-width: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .curso-imagem img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Disciplinas */
+        .disciplinas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        
+        .disciplina-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .disciplina-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .disciplina-imagem {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .disciplina-imagem img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .disciplina-card:hover .disciplina-imagem img {
+            transform: scale(1.05);
+        }
+        
+        .disciplina-conteudo {
+            padding: 20px;
+        }
+        
+        .disciplina-conteudo h3 {
+            color: #3498db;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+        
+        /* Botões - ESTILOS CORRIGIDOS */
+        .botoes-navegacao {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .botao {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            text-align: center;
+        }
+        
+        .botao:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .botao-secundario {
+            background: #e74c3c;
+        }
+        
+        .botao-secundario:hover {
+            background: #c0392b;
+        }
+        
+        /* Rodapé */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+            border-radius: 10px 10px 0 0;
+        }
+        
+        /* Responsividade */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            .curso-info {
+                flex-direction: column;
+            }
+            
+            .disciplinas {
+                grid-template-columns: 1fr;
+            }
+            
+            .botoes-navegacao {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Ciência da Computação</h1>
+            <p>Prepare-se para o futuro da tecnologia com nosso curso de graduação em Ciência da Computação.</p>
+        </div>
+    </header>
+    
+    <main class="container">
+        <section class="curso-info">
+            <div class="curso-texto">
+                <h2>Sobre o Curso</h2>
+                <p>O curso de Ciência da Computação oferece uma formação abrangente em teoria e prática da computação, preparando os alunos para carreiras em desenvolvimento de software, inteligência artificial, ciência de dados e muito mais. Com duração de 4 anos, o curso combina fundamentos teóricos com aplicações práticas em laboratórios modernos.</p>
+                <p>Nossos alunos têm a oportunidade de participar de projetos de pesquisa, estágios em empresas de tecnologia e competições de programação, garantindo uma formação completa e alinhada com as demandas do mercado.</p>
+                
+                <div class="botoes-navegacao">
+                    <a href="#disciplinas" class="botao">Ver Disciplinas</a>
+                    <a href="inscricao.html" class="botao botao-secundario">Inscreva-se</a>
+                </div>
+            </div>
+            
+            <div class="curso-imagem">
+                <img src="person-working-html-computer.jpg" alt="Aluno de Ciência da Computação">
+            </div>
+        </section>
+        
+        <section id="disciplinas">
+            <h2 style="color: #2c3e50; margin-bottom: 20px;">Disciplinas Destaque</h2>
+            <div class="disciplinas">
+                <!-- Disciplina 1 -->
+                <div class="disciplina-card">
+                    <div class="disciplina-imagem">
+                        <img src="screencomp.png" alt="Programação">
+                    </div>
+                    <div class="disciplina-conteudo">
+                        <h3>Algoritmos e Programação</h3>
+                        <p>Introdução aos conceitos fundamentais de programação, estruturas de dados e algoritmos. Os alunos aprendem a resolver problemas computacionais usando linguagens como Python e C++.</p>
+                        <a href="algoritmos.html" class="botao">Saiba Mais</a>
+                    </div>
+                </div>
+                
+                <!-- Disciplina 2 -->
+                <div class="disciplina-card">
+                    <div class="disciplina-imagem">
+                        <img src="unsplash.robot.png" alt="Inteligência Artificial">
+                    </div>
+                    <div class="disciplina-conteudo">
+                        <h3>Inteligência Artificial</h3>
+                        <p>Exploração dos fundamentos da IA, incluindo aprendizado de máquina, redes neurais e processamento de linguagem natural. Aplicações práticas usando frameworks modernos.</p>
+                        <a href="ia.html" class="botao">Saiba Mais</a>
+                    </div>
+                </div>
+                
+                <!-- Disciplina 3 -->
+                <div class="disciplina-card">
+                    <div class="disciplina-imagem">
+                        <img src="unsplash.screen.comp.png" alt="Banco de Dados">
+                    </div>
+                    <div class="disciplina-conteudo">
+                        <h3>Banco de Dados</h3>
+                        <p>Projeto e implementação de sistemas de banco de dados relacionais e não-relacionais. Inclui SQL, modelagem de dados, normalização e técnicas de otimização.</p>
+                        <a href="bd.html" class="botao">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>© 2023 Universidade Tecnológica - Todos os direitos reservados</p>
+            <p>Contato: computacao@universidade.edu.br | (11) 1234-5678</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            function adjustLayout() {
+                const screenWidth = window.innerWidth;
+                const disciplinaCards = document.querySelectorAll('.disciplina-card');
+                
+                if (screenWidth < 600) {
+                    document.querySelector('header h1').style.fontSize = '1.8rem';
+                    document.querySelector('header p').style.fontSize = '1rem';
+                    
+                    disciplinaCards.forEach(card => {
+                        const botao = card.querySelector('.botao');
+                        const titulo = card.querySelector('.disciplina-conteudo h3');
+                        
+                        if (botao) botao.style.padding = '10px 15px';
+                        if (titulo) titulo.style.fontSize = '1.2rem';
+                    });
+                } else {
+                    const headerH1 = document.querySelector('header h1');
+                    const headerP = document.querySelector('header p');
+                    
+                    if (headerH1) headerH1.style.fontSize = '';
+                    if (headerP) headerP.style.fontSize = '';
+                    
+                    disciplinaCards.forEach(card => {
+                        const botao = card.querySelector('.botao');
+                        const titulo = card.querySelector('.disciplina-conteudo h3');
+                        
+                        if (botao) botao.style.padding = '';
+                        if (titulo) titulo.style.fontSize = '';
+                    });
+                }
+            }
+            adjustLayout();
+            window.addEventListener('resize', adjustLayout);
+        });
+    </script>
+</body>
+</html>
